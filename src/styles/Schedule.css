@@ -1,0 +1,117 @@
+.schedule-container {
+  padding: 40px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+}
+
+.schedule-container h1 {
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 2.5em;
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+.day-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 2px solid #e0e6ed;
+}
+
+.day-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  border-color: #3498db;
+}
+
+.day-card h2 {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 18px;
+  margin: 0;
+  text-align: right;
+  font-size: 1.4em;
+  font-weight: 600;
+}
+
+.shift-card {
+  position: relative;
+  padding: 28px;
+  background-image: url('/logo.png');
+  background-size: 150px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-color: rgba(255, 255, 255, 0.98);
+  background-blend-mode: overlay;
+}
+
+.shift-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/logo.png');
+  background-size: 150px;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+.shift-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #ecf0f1;
+  position: relative;
+  z-index: 1;
+}
+
+.shift-row:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.shift-label {
+  font-weight: 600;
+  color: #34495e;
+  font-size: 1em;
+}
+
+.shift-value {
+  color: #2c3e50;
+  font-weight: 500;
+  padding: 6px 12px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  font-size: 0.95em;
+}
+
+.shift-value:has-text("❌") {
+  color: #e74c3c;
+  background: #fadbd8;
+}
+
+.no-schedule {
+  text-align: center;
+  color: #7f8c8d;
+  font-size: 1.2em;
+  padding: 40px;
+}

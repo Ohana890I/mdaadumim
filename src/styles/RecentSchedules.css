@@ -1,0 +1,213 @@
+.recent-schedules-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f8fafc 0%, #edf2f7 100%);
+  padding: 24px;
+}
+
+.recent-header-actions {
+  max-width: 1400px;
+  margin: 0 auto 12px;
+}
+
+.recent-action-btn {
+  border: none;
+  background: #111827;
+  color: white;
+  border-radius: 12px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.recent-title {
+  max-width: 1400px;
+  margin: 0 auto 16px;
+  color: #1f2937;
+}
+
+.recent-controls {
+  max-width: 1400px;
+  margin: 0 auto 14px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.recent-toggle-btn {
+  border: none;
+  background: #111827;
+  color: white;
+  border-radius: 12px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.recent-toggle-btn.secondary {
+  background: #2563eb;
+}
+
+.recent-open-card {
+  max-width: 1400px;
+  margin: 0 auto 16px;
+  background: #fff;
+  border-radius: 14px;
+  padding: 14px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  display: grid;
+  gap: 8px;
+}
+
+.recent-open-card label {
+  color: #475569;
+}
+
+.recent-open-card input {
+  border: 1px solid rgba(15, 23, 42, 0.18);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.recent-form-card {
+  max-width: 1400px;
+  margin: 0 auto 20px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 18px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 12px 34px rgba(15, 23, 42, 0.06);
+}
+
+.recent-form-card h2 {
+  margin-bottom: 12px;
+}
+
+.recent-form-row {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.recent-form-row label {
+  color: #475569;
+}
+
+.recent-form-row input,
+.recent-form-row select,
+.manual-shift-card input {
+  border: 1px solid rgba(15, 23, 42, 0.18);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.manual-schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.manual-shift-card {
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  padding: 10px;
+  display: grid;
+  gap: 8px;
+}
+
+.manual-shift-card h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.volunteer-autocomplete {
+  position: relative;
+  display: grid;
+  gap: 4px;
+}
+
+.autocomplete-list {
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+  z-index: 20;
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+.autocomplete-item {
+  width: 100%;
+  text-align: right;
+  border: none;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+  background: white;
+  padding: 9px 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.autocomplete-item:last-child {
+  border-bottom: none;
+}
+
+.autocomplete-item:hover {
+  background: #eff6ff;
+}
+
+.autocomplete-item small {
+  color: #64748b;
+  font-size: 0.78rem;
+}
+
+.autocomplete-empty {
+  color: #b91c1c;
+  font-size: 0.84rem;
+}
+
+.recent-save-btn {
+  margin-top: 14px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  border-radius: 12px;
+  padding: 12px 16px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.recent-message {
+  margin-top: 10px;
+  color: #0f172a;
+}
+
+.recent-schedule-block {
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+.recent-week-title {
+  margin-bottom: 6px;
+  text-align: center;
+  color: #1f2937;
+}
+
+.recent-week-id {
+  margin-bottom: 18px;
+  text-align: center;
+  color: #64748b;
+}
+
+@media (max-width: 720px) {
+  .recent-schedules-page {
+    padding: 12px;
+  }
+}

@@ -1,0 +1,80 @@
+.availability-container {
+  padding: 40px;
+}
+
+.availability-container h1 {
+  margin-bottom: 25px;
+}
+
+.availability-card {
+  background: white;
+
+  border-radius: 30px;
+
+  padding: 30px;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.05);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  padding: 20px;
+  text-align: center;
+}
+
+td {
+  padding: 18px;
+  text-align: center;
+}
+
+tr:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.submit-btn {
+  margin-top: 25px;
+
+  width: 100%;
+
+  border: none;
+
+  background: black;
+
+  color: white;
+
+  padding: 14px;
+
+  border-radius: 16px;
+
+  cursor: pointer;
+
+  font-size: 16px;
+}
+.notes-section {
+  margin-top: 25px;
+}
+
+.notes-section h3 {
+  margin-bottom: 10px;
+}
+
+.notes-section textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  resize: vertical;
+  font-family: inherit;
+}

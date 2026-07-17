@@ -1,0 +1,152 @@
+.settings-container {
+  min-height: 100vh;
+  background: #f5f5f7;
+  padding: 40px;
+}
+
+.settings-card {
+  max-width: 720px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 30px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.settings-card h1 {
+  margin-bottom: 8px;
+}
+
+.settings-subtitle {
+  color: #6b7280;
+  margin-bottom: 22px;
+}
+
+.settings-section {
+  background: #f8fafc;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 14px;
+}
+
+.settings-section h2 {
+  margin: 0 0 12px;
+  font-size: 20px;
+}
+
+.settings-field {
+  margin-bottom: 12px;
+}
+
+.settings-field label {
+  display: block;
+  color: #475569;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.settings-field input {
+  width: 100%;
+  border: 1px solid rgba(15, 23, 42, 0.18);
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 15px;
+}
+
+.settings-field input:focus {
+  outline: none;
+  border-color: #111827;
+}
+
+.settings-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8fafc;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 14px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+}
+
+.settings-row span {
+  color: #64748b;
+}
+
+.settings-actions {
+  margin-top: 24px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+  border: none;
+  padding: 14px 18px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.primary-btn {
+  background: #111827;
+  color: white;
+}
+
+.secondary-btn {
+  background: #e2e8f0;
+  color: #111827;
+}
+
+.danger-btn {
+  border: none;
+  background: #dc2626;
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.danger-btn:hover {
+  opacity: 0.92;
+}
+
+.danger-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.danger-section p {
+  margin-bottom: 10px;
+  color: #64748b;
+}
+
+.settings-message {
+  margin: 10px 0;
+  color: #111827;
+  background: #e2e8f0;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+@media (max-width: 680px) {
+  .settings-container {
+    padding: 20px;
+  }
+
+  .settings-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .settings-actions {
+    flex-direction: column;
+  }
+}
