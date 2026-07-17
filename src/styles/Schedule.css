@@ -115,3 +115,43 @@
   font-size: 1.2em;
   padding: 40px;
 }
+
+@media (max-width: 900px) {
+  .schedule-container {
+    padding: 16px 12px;
+  }
+
+  .schedule-container h1 {
+    font-size: 1.7rem;
+    margin-bottom: 18px;
+  }
+
+  .schedule-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .day-card h2 {
+    font-size: 1.08rem;
+    padding: 12px;
+  }
+
+  .shift-card {
+    padding: 14px;
+    background-size: 110px;
+  }
+
+  .shift-card::before {
+    background-size: 110px;
+  }
+
+  .shift-row {
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+  }
+
+  .shift-label,
+  .shift-value {
+    font-size: 0.9rem;
+  }
+}

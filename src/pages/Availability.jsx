@@ -253,6 +253,7 @@ if (
             🟢 פתוח להגשה
           </div>
 
+          <div className="availability-table-wrapper">
           <table className="availability-table">
 
             <thead>
@@ -310,6 +311,7 @@ if (
             </tbody>
 
           </table>
+          </div>
 
 <div className="notes-section">
 

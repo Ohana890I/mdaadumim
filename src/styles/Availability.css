@@ -22,6 +22,11 @@ table {
   border-collapse: collapse;
 }
 
+.availability-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
 th {
   padding: 20px;
   text-align: center;
@@ -77,4 +82,35 @@ input[type="checkbox"] {
   border: 1px solid #ddd;
   resize: vertical;
   font-family: inherit;
+}
+
+@media (max-width: 900px) {
+  .availability-container {
+    padding: 16px;
+  }
+
+  .availability-card {
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .availability-container h1 {
+    font-size: 1.35rem;
+    margin-bottom: 14px;
+  }
+
+  .availability-table {
+    min-width: 420px;
+  }
+
+  th,
+  td {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+
+  input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+  }
 }
