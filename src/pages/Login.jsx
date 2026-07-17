@@ -77,7 +77,7 @@ function Login() {
 
         <div className="logo-container">
           <img
-            src="public/logo.png"
+            src="/logo.png"
             alt="MDA Logo"
             className="logo"
           />
