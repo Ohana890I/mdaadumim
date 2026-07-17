@@ -336,7 +336,7 @@ function Admin() {
                 "/admin/draft"
               }
             >
-              🤖 טיוטת שיבוץ
+               טיוטת שיבוץ
             </button>
             <button
               className="action-btn"
@@ -348,7 +348,7 @@ function Admin() {
               className="action-btn"
               onClick={() => navigate("/admin/recent-schedules")}
             >
-              🗂️ שיבוצים אחרונים
+               שיבוצים אחרונים
             </button>
             <button
               className="action-btn"
@@ -360,7 +360,7 @@ function Admin() {
               className="action-btn secondary"
               onClick={loadAnnouncements}
             >
-              🔄 רענן הודעות
+               רענן הודעות
             </button>
             <button
               className="action-btn logout-btn"
