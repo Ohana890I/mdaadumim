@@ -74,6 +74,8 @@ function Schedule() {
     return value;
   };
 
+  const isMissingShiftValue = (value) => getShiftStatus(value).includes("❌");
+
   if (loading) {
     return (
       <>
@@ -139,17 +141,23 @@ function Schedule() {
 
                   <div className="shift-row">
                     <span className="shift-label">אחמ״ש:</span>
-                    <span className="shift-value">{getShiftStatus(schedule[shift].ahmash)}</span>
+                    <span className={`shift-value ${isMissingShiftValue(schedule[shift].ahmash) ? "missing" : ""}`}>
+                      {getShiftStatus(schedule[shift].ahmash)}
+                    </span>
                   </div>
 
                   <div className="shift-row">
                     <span className="shift-label">לבן 1:</span>
-                    <span className="shift-value">{getShiftStatus(schedule[shift].ben1)}</span>
+                    <span className={`shift-value ${isMissingShiftValue(schedule[shift].ben1) ? "missing" : ""}`}>
+                      {getShiftStatus(schedule[shift].ben1)}
+                    </span>
                   </div>
 
                   <div className="shift-row">
                     <span className="shift-label">לבן 2:</span>
-                    <span className="shift-value">{getShiftStatus(schedule[shift].ben2)}</span>
+                    <span className={`shift-value ${isMissingShiftValue(schedule[shift].ben2) ? "missing" : ""}`}>
+                      {getShiftStatus(schedule[shift].ben2)}
+                    </span>
                   </div>
 
                 </div>

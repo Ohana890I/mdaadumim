@@ -19,6 +19,7 @@ function Settings() {
   const [deletionRequested, setDeletionRequested] = useState(
     currentUser?.deletionRequested || false
   );
+  const [confirmDelete, setConfirmDelete] = useState(false);
 
   useEffect(() => {
     if (!currentUser?.id) {
@@ -154,12 +155,9 @@ function Settings() {
       return;
     }
 
-    const confirmed = window.confirm(
-      "לשלוח בקשת מחיקת חשבון? ניתן לבטל דרך האדמין."
-    );
-
-    if (!confirmed) {
-      setDeleteMessage("הבקשה בוטלה");
+    if (!confirmDelete) {
+      setConfirmDelete(true);
+      setDeleteMessage("לחץ שוב על כפתור המחיקה כדי לאשר שליחת בקשה.");
       return;
     }
 
@@ -176,6 +174,7 @@ function Settings() {
 
       localStorage.setItem("currentUser", JSON.stringify(updatedUser));
       setDeletionRequested(true);
+      setConfirmDelete(false);
       setDeleteMessage(
         "בקשת מחיקה נשלחה בהצלחה. מתבצעת התנתקות..."
       );
@@ -187,6 +186,7 @@ function Settings() {
     } catch (error) {
       console.error(error);
       setDeleteMessage("אירעה שגיאה בשליחת בקשת המחיקה");
+      setConfirmDelete(false);
     }
   };
 
@@ -292,7 +292,11 @@ function Settings() {
               onClick={requestDeleteAccount}
               disabled={deletionRequested}
             >
-              {deletionRequested ? "בקשה נשלחה" : "בקש מחיקת חשבון"}
+              {deletionRequested
+                ? "בקשה נשלחה"
+                : confirmDelete
+                  ? "אשר שליחת בקשת מחיקה"
+                  : "בקש מחיקת חשבון"}
             </button>
           </section>
 
