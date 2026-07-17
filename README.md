@@ -41,3 +41,4 @@ Current rules are production-oriented and assume Firebase Authentication is used
   - `request.auth.token.admin == true`
 
 If your current app flow still uses only localStorage checks for admin and does not sign users in with Firebase Auth, apply the rules only after completing the auth migration.
+# mdaadumim
