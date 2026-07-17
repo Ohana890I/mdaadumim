@@ -91,7 +91,21 @@ const [notes, setNotes] = useState("");
   const currentDay = now.getDay();
   const currentHour = now.getHours();
 
- let submissionOpen = true;
+let submissionOpen = false;
+
+if (
+  currentDay === 3 &&
+  currentHour >= 12
+) {
+  submissionOpen = true;
+}
+
+if (
+  currentDay === 4 &&
+  currentHour < 21
+) {
+  submissionOpen = true;
+}
 
 
   const handleChange = (day, shift) => {
